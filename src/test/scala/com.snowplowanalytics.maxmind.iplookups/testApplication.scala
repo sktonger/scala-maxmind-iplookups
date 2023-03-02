@@ -8,9 +8,9 @@ object testApplication extends App {
   println("Hello world2")
   val ipLookups = CreateIpLookups[Id].createFromFilenames(
     geoFile = Some("/Users/stonger/a_conviva/MaxMindData/GeoIP2-Enterprise.mmdb"),
-    ispFile = Some("/Users/stonger/a_conviva/MaxMindData/GeoIP2-ISP.mmdb"),
+    ispFile = None,
     domainFile = None,
-    connectionTypeFile = Some("/Users/stonger/a_conviva/MaxMindData/GeoIP2-Connection-Type.mmdb"),
+    connectionTypeFile = None,
     memCache = false,
     lruCacheSize = 20000
   )

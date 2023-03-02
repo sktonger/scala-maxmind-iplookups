@@ -42,7 +42,10 @@ object model {
     regionName: Option[String],
     isInEuropeanUnion: Boolean,
     continent: String,
-    accuracyRadius: Int
+    accuracyRadius: Int,
+    asn: Option[Int],
+    isp: Option[String],
+    connectionType: Option[String]
   )
 
   /** A case class wrapper around the MaxMind AnonymousIp class. */
@@ -85,7 +88,10 @@ object model {
         regionName = Option(enterpriseResponse.getMostSpecificSubdivision.getName),
         isInEuropeanUnion = isInEuropeanUnion,
         continent = enterpriseResponse.getContinent.getName,
-        accuracyRadius = enterpriseResponse.getLocation.getAccuracyRadius
+        accuracyRadius = enterpriseResponse.getLocation.getAccuracyRadius,
+        asn = Option(enterpriseResponse.getTraits.getAutonomousSystemNumber.toInt),
+        isp = Option(enterpriseResponse.getTraits.getIsp.toLowerCase()),
+        connectionType = Option(enterpriseResponse.getTraits.getConnectionType.toString)
       )
     }
   }
