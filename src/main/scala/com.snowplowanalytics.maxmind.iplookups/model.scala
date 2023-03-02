@@ -12,18 +12,16 @@
  */
 package com.snowplowanalytics.maxmind.iplookups
 
-import java.net.InetAddress
-
 import cats.data.ValidatedNel
-import cats.syntax.traverse._
-import cats.syntax.either._
-import cats.syntax.apply._
-import cats.instances.option._
 import cats.instances.either._
-
+import cats.instances.option._
+import cats.syntax.apply._
+import cats.syntax.either._
+import cats.syntax.traverse._
 import com.maxmind.geoip2.DatabaseReader
-import com.maxmind.geoip2.model.CityResponse
-import com.maxmind.geoip2.model.AnonymousIpResponse
+import com.maxmind.geoip2.model.{AnonymousIpResponse, CityResponse}
+
+import java.net.InetAddress
 
 object model {
   type ReaderFunction = (DatabaseReader, InetAddress) => String
