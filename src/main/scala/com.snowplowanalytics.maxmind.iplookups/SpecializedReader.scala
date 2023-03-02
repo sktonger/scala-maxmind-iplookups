@@ -13,14 +13,11 @@
 package com.snowplowanalytics.maxmind.iplookups
 
 import java.net.InetAddress
-
 import cats.{Eval, Id}
 import cats.effect.Sync
 import cats.syntax.either._
 import com.maxmind.geoip2.DatabaseReader
-import com.maxmind.geoip2.model.CityResponse
-import com.maxmind.geoip2.model.AnonymousIpResponse
-
+import com.maxmind.geoip2.model.{AnonymousIpResponse, EnterpriseResponse}
 import model._
 
 /** Data type letting you read data in maxmind's DatabaseReader. */
@@ -34,7 +31,7 @@ sealed trait SpecializedReader[F[_]] {
   def getCityValue(
     db: DatabaseReader,
     ip: InetAddress
-  ): F[Either[Throwable, CityResponse]]
+  ): F[Either[Throwable, EnterpriseResponse]]
 
   def getAnonymousValue(
     db: DatabaseReader,
@@ -55,8 +52,8 @@ object SpecializedReader {
     def getCityValue(
       db: DatabaseReader,
       ip: InetAddress
-    ): F[Either[Throwable, CityResponse]] =
-      Sync[F].delay(Either.catchNonFatal(db.city(ip)))
+    ): F[Either[Throwable, EnterpriseResponse]] =
+      Sync[F].delay(Either.catchNonFatal(db.enterprise(ip)))
 
     def getAnonymousValue(
       db: DatabaseReader,
@@ -77,8 +74,8 @@ object SpecializedReader {
     def getCityValue(
       db: DatabaseReader,
       ip: InetAddress
-    ): Eval[Either[Throwable, CityResponse]] =
-      Eval.later(Either.catchNonFatal(db.city(ip)))
+    ): Eval[Either[Throwable, EnterpriseResponse]] =
+      Eval.later(Either.catchNonFatal(db.enterprise(ip)))
 
     def getAnonymousValue(
       db: DatabaseReader,
@@ -99,8 +96,8 @@ object SpecializedReader {
     def getCityValue(
       db: DatabaseReader,
       ip: InetAddress
-    ): Id[Either[Throwable, CityResponse]] =
-      Either.catchNonFatal(db.city(ip))
+    ): Id[Either[Throwable, EnterpriseResponse]] =
+      Either.catchNonFatal(db.enterprise(ip))
 
     def getAnonymousValue(
       db: DatabaseReader,

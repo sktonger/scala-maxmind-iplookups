@@ -19,7 +19,7 @@ import cats.syntax.apply._
 import cats.syntax.either._
 import cats.syntax.traverse._
 import com.maxmind.geoip2.DatabaseReader
-import com.maxmind.geoip2.model.{AnonymousIpResponse, CityResponse}
+import com.maxmind.geoip2.model.{AnonymousIpResponse, EnterpriseResponse}
 
 import java.net.InetAddress
 
@@ -63,28 +63,29 @@ object model {
      * @param cityResponse MaxMind CityResponse object
      * @return IpLocation
      */
-    def apply(cityResponse: CityResponse): IpLocation = {
+    def apply(enterpriseResponse: EnterpriseResponse): IpLocation = {
       // Try to bypass bincompat problem with Spark Enrich,
       // Delete once Spark Enrich is deprecated
       val isInEuropeanUnion =
-        try cityResponse.getCountry.isInEuropeanUnion
+        try enterpriseResponse.getCountry.isInEuropeanUnion
         catch {
           case _: NoSuchMethodError => false
         }
       IpLocation(
-        countryCode = cityResponse.getCountry.getIsoCode,
-        countryName = cityResponse.getCountry.getName,
-        region = Option(cityResponse.getMostSpecificSubdivision.getIsoCode),
-        city = Option(cityResponse.getCity.getName),
-        latitude = Option(cityResponse.getLocation.getLatitude).map(_.toFloat).getOrElse(0f),
-        longitude = Option(cityResponse.getLocation.getLongitude).map(_.toFloat).getOrElse(0f),
-        timezone = Option(cityResponse.getLocation.getTimeZone),
-        postalCode = Option(cityResponse.getPostal.getCode),
-        metroCode = Option(cityResponse.getLocation.getMetroCode).map(_.toInt),
-        regionName = Option(cityResponse.getMostSpecificSubdivision.getName),
+        countryCode = enterpriseResponse.getCountry.getIsoCode,
+        countryName = enterpriseResponse.getCountry.getName,
+        region = Option(enterpriseResponse.getMostSpecificSubdivision.getIsoCode),
+        city = Option(enterpriseResponse.getCity.getName),
+        latitude = Option(enterpriseResponse.getLocation.getLatitude).map(_.toFloat).getOrElse(0f),
+        longitude =
+          Option(enterpriseResponse.getLocation.getLongitude).map(_.toFloat).getOrElse(0f),
+        timezone = Option(enterpriseResponse.getLocation.getTimeZone),
+        postalCode = Option(enterpriseResponse.getPostal.getCode),
+        metroCode = Option(enterpriseResponse.getLocation.getMetroCode).map(_.toInt),
+        regionName = Option(enterpriseResponse.getMostSpecificSubdivision.getName),
         isInEuropeanUnion = isInEuropeanUnion,
-        continent = cityResponse.getContinent.getName,
-        accuracyRadius = cityResponse.getLocation.getAccuracyRadius
+        continent = enterpriseResponse.getContinent.getName,
+        accuracyRadius = enterpriseResponse.getLocation.getAccuracyRadius
       )
     }
   }
