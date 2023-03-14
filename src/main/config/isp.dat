@@ -1,0 +1,391 @@
+1|AT&T
+2|Actrix
+3|Alltel
+4|Armstrong
+5|BSkyB
+6|BTNet
+7|Bacom
+8|Beijing Telecom
+9|Bell Aliant
+10|Bresnan
+11|CANTV
+12|CBC
+13|CBeyond
+14|CERNET
+15|CNC Group
+16|CT Dept Ed
+17|CableOne
+18|Cablevision
+19|California State University
+20|Cavalier Telephone
+21|Verizon Wireless
+22|CenturyTel
+23|Charter
+24|China Railway Net
+25|China Telecom
+26|ChinaNet
+27|Cincinnati Bell
+28|Clearwire
+29|Cogeco Canada
+30|Cogent
+31|Comcast
+32|Compass
+33|CoreComm
+34|Covad
+35|Cox
+36|Cricket
+37|Deutsche Telekom
+38|Digi
+39|Disney
+40|DoD
+41|Embarq
+42|FPT
+43|Fairpoint
+44|France Telecom
+45|Frontier
+46|General Comm
+47|Global Village
+48|GrandeCom
+49|Guangdong Mobile
+50|HINet
+51|HanseNet
+52|Hawaiian
+53|Henan Provincial
+54|Hughes Network
+55|ILAP
+56|ITC Delta
+57|InSPire Net
+58|Infostrada
+59|Insight
+60|Integra
+61|Intelig Telecomunica
+62|Jaring
+63|Kable Deutschland
+64|Knology
+65|Krypt
+66|Liaoning Provincial
+67|MCNC
+68|MTS Allstream
+69|Maxis
+70|Merit
+71|Midcontinent Media
+72|NTT
+73|SFR
+74|OK Dept Ed
+75|OTENET
+76|Oceanic
+77|Orcon
+78|P1
+79|PaeTec
+80|PenTeleData
+81|Polish Telecom
+82|Free
+83|Qwest
+84|Ripe5089
+85|RoadRunner
+86|Rogers
+87|SERPRO
+88|Sasktel
+89|Shandong Provincial
+90|Shaw
+91|Slingshot
+92|Snap
+93|Softbank
+94|Sprint
+95|T-Mobile
+96|T.Net
+97|TANet
+98|TDS
+99|TM
+100|TTNET
+101|TW Telecom
+102|Telecom
+103|Telecom Argentina
+104|Telecom Italia
+105|Telecomunicacoes da Bahia
+106|Telefonica de Espana
+107|Telefonica do Argentina
+108|TeliaNet
+109|Telnet Comms
+110|Telstra
+111|Telus
+112|Tiscali
+113|UPC Broadband
+114|Uninet
+115|Unity Media
+116|Universidad Central de Venezuela
+117|VNPT
+118|VTR Banda Ancha
+119|Verizon
+120|Videotron
+121|Vodafone
+122|WideOpenWest
+123|Windstream
+124|WiscNet
+125|Woosh
+126|XO Comm
+127|Xnet
+128|fastweb
+129|level3
+130|telefonica deutschland
+131|9Telecom
+132|Completel
+133|Nerim
+134|Bouygues
+135|NumeriCable
+136|Bahnhof
+137|Bredbandsbolaget Telenor
+138|Freeserve
+139|CSBNET
+140|Fiber Direct in Sweden AB
+141|Four Edge
+142|GavleNet
+143|GleSYS
+144|Gotaland network AB
+145|I2B (Internet 2 Business)
+146|IP-Only
+147|IT Hälsingland
+148|Ownit
+149|Phonera
+150|PirateISP AB Sweden
+151|Resilans
+152|Sandnet
+153|Stupi.NET
+154|SUNET
+155|Tele2
+156|TeliaSonera
+157|Connect2IP
+158|Bell Canada
+159|Brighthouse
+160|TDC Data Networks
+161|Telenor (Denmark)
+162|Fullrate
+163|Hi3G
+164|TeliaSonera (Stofa)
+165|DNA
+166|Syd Energi
+167|TeliaSonera (Finland)
+168|Altibox
+169|Elisa
+170|NEXTGENTEL
+171|EnergiMidt
+172|GET Norway
+173|Bredband 2
+174|Telecom3
+175|IT-Lauget Parknet
+176|Globalcom
+177|Wayport
+178|Digital Teleport
+179|Mediacom
+180|Tele Columbus
+181|Liwest
+182|Teleyecla
+183|Jazz Telecom
+184|Teleporte
+185|SkyLogic
+186|Visovision
+187|Andorra Telecom
+188|Telefonica
+189|Procono
+190|Netllar
+191|Iberbanda
+192|Xtra Telecom
+193|Sandetel
+194|Wilhelm Tel
+195|TCable
+196|M-Net
+197|Kabel BW
+198|Orange
+199|Hutchison
+200|R Cable and Telecom
+201|Red
+202|GuifiNet
+203|ProRed
+204|Euskaltel
+205|SkynetLink
+206|Delunet
+207|Comenersol
+208|Bharti Airtel
+209|CICA
+210|WimaxOnline
+211|KMS
+212|Telekom Austria
+213|GrupoInfoShop
+214|RedIRIS
+215|Knet
+216|Adamo Telecom
+217|EweTel
+218|Versatel
+219|Colt
+220|Eurona
+221|Vimpelcom
+222|Cableworld
+223|Xfera
+224|Telecable
+225|SCIP
+226|HTP
+227|Tele Elda
+228|QSC
+229|Ono
+230|PrimaCom
+231|RadioCable
+232|Cablex
+233|Cablemurcia
+234|Cablemel
+235|Sky Italia
+236|Axtel
+237|Television Internacional
+238|Cablemas Telecomunicaciones
+239|Brazil Telecom
+240|Mauritius Telecom
+241|TOTAL PLAY TELECOMUNICACIONES
+242|TV Rey de Occidente
+243|Plusnet
+244|MEO
+245|America Movil
+246|Megacable Counicaciones
+247|Gigacable de Aguascalientel
+248|Swisscom
+249|IPNET
+250|T-HT Croatian Telecom
+251|Alestra
+252|Tigo
+253|Entel
+254|Telefonos del Noroeste
+255|Maxcom Telecomunicaciones
+256|TalkTalk
+257|ASK4
+258|Tata Teleservices
+259|NordixNett
+260|Hordaland Fylkeskommune
+261|Buckinghamshire New University
+262|Enivest
+263|RingNett
+264|Kvantel
+265|Claranet
+266|StayOn
+267|Uninett
+268|Statoil
+269|Exponential-e
+270|Sure Guernsey
+271|RUGNET
+272|Monsternett
+273|Cogent Communications
+274|Solcon Internet
+275|The Cloud Networks
+276|Talktalk
+277|Infonett
+278|ZeelandNet
+279|Vitnett
+280|KCOM
+281|Digital Ocean
+282|CAIW Internet
+283|Sognenett
+284|Ziggo
+285|Trollfjord
+286|Zen Internet
+287|NTE
+288|Daisy Communications
+289|Gamma Telecom
+290|KPN International
+291|Entanet International
+292|Telefiber
+293|Cablecom Networking
+294|Norsk Helsenett
+295|TV2 Norway
+296|PowerTech
+297|Romerike Broadband
+298|Hyperoptic
+299|Keycom
+300|EuroNet
+301|Broadnet AS
+302|Independent Fibre Networks
+303|Telia Norway
+304|Serve The World
+305|Ardalsnett
+306|Norwegian Broadcasting Corporation
+307|Convergence Group
+308|XS4ALL
+309|Eidsiva
+310|Nordmore Energiverk
+311|Xfiber
+312|Austevoll Kraftlag
+313|Tele 2 Netherlands
+314|BigAir
+315|Signal
+316|BKK Fiber
+317|Charter Communications
+318|Lynet Internett
+319|Blix
+320|Forsvarets Logistikkorganisasjon
+321|Phonero
+322|SK Telecom
+323|SmarTone
+324|MobiFone
+325|CAT Telecom
+326|Saudi Telecom
+327|Vivendi
+328|Sistema
+329|Telia Company
+330|MNT
+331|MegaFon
+332|PLDT
+333|Nextel
+334|TaTa DoCoMo
+335|KDDI
+336|TPG Telecom
+337|TDC
+338|UK BroadBand
+339|Imagine
+340|True
+341|K-Opticom
+342|Partner Communications
+343|Axiata
+344|Far Eastone
+345|Thaicom
+346|Mobileone
+347|Korea Telecom
+348|Proximus
+349|I-Cable
+350|Taiwan Star Telecom
+351|Wharf T&T
+352|Singtel
+353|Cosmote
+354|Du
+355|Sonic.Net
+356|Telkom Indonesia
+357|Tata Communications
+358|Taiwan Mobile
+359|PCCW
+360|Asahi Net
+361|Globe Telecom
+362|Internet Initiative Japan
+363|Akamai
+364|Telepacific Communications
+365|TOT Public Company
+366|Centurylink
+367|Mytv Super Limited
+368|Viewqwest
+369|Afrihost
+370|Freebit
+371|Lycamobile
+372|Jupiter Telecommunications
+373|China Unicom
+374|Viettel
+375|Asia Pacific Telecom
+376|Hong Kong Broadband Network
+377|Time Dotcom Bhd
+378|China Mobile
+379|Wifirst
+380|Celcom
+381|Etisalat
+382|Y!Mobile
+383|Telenor
+384|Japan Communication
+385|Citic Telecom
+386|Eastern Telecommunications Phillipines
+387|Lg Uplus
+388|Chunghwa Telecom
+389|Advanced Info Service
+390|Biglobe
+391|Starhub

@@ -18,6 +18,7 @@ import cats.instances.option._
 import cats.syntax.apply._
 import cats.syntax.either._
 import cats.syntax.traverse._
+import com.conviva.snowplow.encodedGeoInfo
 import com.maxmind.geoip2.DatabaseReader
 import com.maxmind.geoip2.model.{AnonymousIpResponse, EnterpriseResponse}
 
@@ -76,9 +77,9 @@ object model {
         }
       IpLocation(
         countryCode = enterpriseResponse.getCountry.getIsoCode,
-        countryName = enterpriseResponse.getCountry.getName,
+        countryName = encodedGeoInfo.countryMap.get(enterpriseResponse.getCountry.getName.toLowerCase).getOrElse("-1"),
         region = Option(enterpriseResponse.getMostSpecificSubdivision.getIsoCode),
-        city = Option(enterpriseResponse.getCity.getName),
+        city = Option(encodedGeoInfo.cityMap.getOrElse(enterpriseResponse.getCity.getName,"-1")),
         latitude = Option(enterpriseResponse.getLocation.getLatitude).map(_.toFloat).getOrElse(0f),
         longitude =
           Option(enterpriseResponse.getLocation.getLongitude).map(_.toFloat).getOrElse(0f),
@@ -87,11 +88,11 @@ object model {
         metroCode = Option(enterpriseResponse.getLocation.getMetroCode).map(_.toInt),
         regionName = Option(enterpriseResponse.getMostSpecificSubdivision.getName),
         isInEuropeanUnion = isInEuropeanUnion,
-        continent = enterpriseResponse.getContinent.getName,
+        continent = encodedGeoInfo.continentMap.get(enterpriseResponse.getContinent.getName).getOrElse("-1"),
         accuracyRadius = enterpriseResponse.getLocation.getAccuracyRadius,
         asn = Option(enterpriseResponse.getTraits.getAutonomousSystemNumber.toInt),
-        isp = Option(enterpriseResponse.getTraits.getIsp.toLowerCase()),
-        connectionType = Option(enterpriseResponse.getTraits.getConnectionType.toString)
+        isp = Option(encodedGeoInfo.ispMap.get(enterpriseResponse.getTraits.getIsp.toLowerCase()).getOrElse("-1")),
+        connectionType = Option(encodedGeoInfo.connectionMap.get(enterpriseResponse.getTraits.getConnectionType.toString).getOrElse("-1"))
       )
     }
   }

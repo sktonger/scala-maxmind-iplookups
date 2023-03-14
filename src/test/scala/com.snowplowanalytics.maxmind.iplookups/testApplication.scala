@@ -1,6 +1,5 @@
 package com.snowplowanalytics.maxmind.iplookups
 import cats.Id
-import com.snowplowanalytics.maxmind.iplookups.model.IpLookupResult
 object testApplication extends App {
 ///Users/stonger/a_conviva/MaxMindData
   //GeoIP2-ISP.mmdb
@@ -14,8 +13,7 @@ object testApplication extends App {
     memCache = false,
     lruCacheSize = 20000
   )
+  val ips:List[String] = List("142.250.195.3","175.16.199.0")
+  ips.map(x => println(ipLookups.performLookups(x)))
 
-  val idResult: IpLookupResult = ipLookups.performLookups("175.16.199.0")
-
-  println(idResult)
 }
