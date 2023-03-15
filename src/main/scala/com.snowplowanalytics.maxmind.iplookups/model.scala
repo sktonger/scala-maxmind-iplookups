@@ -77,9 +77,11 @@ object model {
         }
       IpLocation(
         countryCode = enterpriseResponse.getCountry.getIsoCode,
-        countryName = encodedGeoInfo.countryMap.get(enterpriseResponse.getCountry.getName.toLowerCase).getOrElse("-1"),
+        countryName = encodedGeoInfo.countryMap
+          .get(enterpriseResponse.getCountry.getName.toLowerCase)
+          .getOrElse("-1"),
         region = Option(enterpriseResponse.getMostSpecificSubdivision.getIsoCode),
-        city = Option(encodedGeoInfo.cityMap.getOrElse(enterpriseResponse.getCity.getName,"-1")),
+        city = Option(encodedGeoInfo.cityMap.getOrElse(enterpriseResponse.getCity.getName, "-1")),
         latitude = Option(enterpriseResponse.getLocation.getLatitude).map(_.toFloat).getOrElse(0f),
         longitude =
           Option(enterpriseResponse.getLocation.getLongitude).map(_.toFloat).getOrElse(0f),
@@ -88,11 +90,20 @@ object model {
         metroCode = Option(enterpriseResponse.getLocation.getMetroCode).map(_.toInt),
         regionName = Option(enterpriseResponse.getMostSpecificSubdivision.getName),
         isInEuropeanUnion = isInEuropeanUnion,
-        continent = encodedGeoInfo.continentMap.get(enterpriseResponse.getContinent.getName).getOrElse("-1"),
+        continent =
+          encodedGeoInfo.continentMap.get(enterpriseResponse.getContinent.getName).getOrElse("-1"),
         accuracyRadius = enterpriseResponse.getLocation.getAccuracyRadius,
         asn = Option(enterpriseResponse.getTraits.getAutonomousSystemNumber.toInt),
-        isp = Option(encodedGeoInfo.ispMap.get(enterpriseResponse.getTraits.getIsp.toLowerCase()).getOrElse("-1")),
-        connectionType = Option(encodedGeoInfo.connectionMap.get(enterpriseResponse.getTraits.getConnectionType.toString).getOrElse("-1"))
+        isp = Option(
+          encodedGeoInfo.ispMap
+            .get(enterpriseResponse.getTraits.getIsp.toLowerCase())
+            .getOrElse("-1")
+        ),
+        connectionType = Option(
+          encodedGeoInfo.connectionMap
+            .get(enterpriseResponse.getTraits.getConnectionType.toString)
+            .getOrElse("-1")
+        )
       )
     }
   }

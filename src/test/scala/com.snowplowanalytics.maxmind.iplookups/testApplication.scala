@@ -13,7 +13,7 @@ object testApplication extends App {
     memCache = false,
     lruCacheSize = 20000
   )
-  val ips:List[String] = List("142.250.195.3","175.16.199.0")
+  val ips: List[String] = List("142.250.195.3", "175.16.199.0")
   ips.map(x => println(ipLookups.performLookups(x)))
 
 }

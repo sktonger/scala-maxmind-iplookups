@@ -4,12 +4,12 @@ import scala.io.Source
 
 object encodedGeoInfo {
 
-  val cityMap        = loadCityMap()
-  val continentMap   = loadContinentMap()
-  val asnMap         = loadAsnMap()
-  val countryMap     = loadCountryMap()
+  val cityMap       = loadCityMap()
+  val continentMap  = loadContinentMap()
+  val asnMap        = loadAsnMap()
+  val countryMap    = loadCountryMap()
   val connectionMap = loadConnnectionMap()
-  val ispMap         = loadIspMap()
+  val ispMap        = loadIspMap()
 
   def loadCityMap(): Map[String, String] =
     loadFileToMap("src/main/config/cities.dat.gp")
